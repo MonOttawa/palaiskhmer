@@ -38,15 +38,30 @@
 
     // Slider
 
+    function initSlider() {
+        $('.main-slider').flexslider({
+            animation: "fade",
+            slideshow: true,
+            directionNav: false,
+            controlNav: true,
+            pauseOnAction: false,
+            animationSpeed: 700
+        });
+    }
 
-    $('.main-slider').flexslider({
-        animation: "fade",
-        slideshow: true,
-        directionNav: false,
-        controlNav: true,
-        pauseOnAction: false,
-        animationSpeed: 700
-    });
+    // Initialize slider - wait for images if not yet loaded
+    if (document.readyState === 'complete') {
+        initSlider();
+    } else {
+        $(window).on('load', initSlider);
+    }
+
+    // Fallback: ensure slider starts even if window.load is delayed
+    setTimeout(function() {
+        if (!$('.main-slider').data('flexslider')) {
+            initSlider();
+        }
+    }, 3000);
 
 
     $('.review-slider').flexslider({
