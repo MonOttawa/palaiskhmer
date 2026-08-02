@@ -130,27 +130,19 @@
     });
 
 
-    // Instagram feed setup
-
-    var instaFeed = new Instafeed({
-        get: 'user',
-        userId: '45023071610',
-        accessToken: '11545097331.1d3aecb.059491f315a34f789a40c84ecd20a382',
-        limit: 6,
-        resolution: 'standard_resolution',
-        template: '<li><a class="hover-effect" target="_blank" href="{{link}}"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-plus hover-effect-icon-inner"></span></span></span></span><img class=" mw-100" src="{{image}}" /></a></li>'
-    });
-    instaFeed.run();
+    // Instagram feed removed — old API (v1) is deprecated and throws errors
 
 
     // Jarallax setup
 
 
-    jarallax(document.querySelectorAll('.jarallax'), {
-        speed: 0.5,
-        disableParallax: /iPad|iPhone|iPod|Android/,
-        disableVideo: /iPad|iPhone|iPod|Android/
-    });
+    if (typeof jarallax !== 'undefined') {
+        jarallax(document.querySelectorAll('.jarallax'), {
+            speed: 0.5,
+            disableParallax: /iPad|iPhone|iPod|Android/,
+            disableVideo: /iPad|iPhone|iPod|Android/
+        });
+    }
 
 
 })(jQuery);
