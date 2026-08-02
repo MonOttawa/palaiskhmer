@@ -1,16 +1,11 @@
 (function($) {
     "use strict";
 
-    // Windows load
+    // Site loader — dismiss immediately on DOM ready instead of waiting
+    // for window.load, which can hang forever if GTM/GA or Instagram is blocked
 
-    $(window).on("load", function() {
-
-        // Site loader 
-
-        $(".loader-inner").fadeOut();
-        $(".loader").delay(200).fadeOut("slow");
-
-    });
+    $(".loader-inner").hide();
+    $(".loader").hide();
 
 
     // Site navigation setup
