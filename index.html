@@ -71,7 +71,7 @@
 </script>
 <!-- Css -->
 <link href="css/bootstrap.css" media="all" rel="stylesheet" type="text/css"/>
-<link href="css/main.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="css/main.css?v=2" media="all" rel="stylesheet" type="text/css"/>
 <link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet"/>
 <link href="css/flexslider.css?v=2" media="all" rel="stylesheet" type="text/css"/>
 <link href="css/magnific-popup.css" media="all" rel="stylesheet" type="text/css"/>
@@ -121,25 +121,12 @@
 </div>
 </header>
 <!--End header-->
-<!--Main slider-->
-<div class="main-slider slider flexslider">
-<ul class="slides">
-<li>
-<div class="background-img gradient-overlay gradient-overlay-dark" style="background-image:url('assets/img/1.jpg')">
-<img alt="" src="assets/img/1.jpg"/>
-</div>
-</li>
-<li>
-<div class="background-img gradient-overlay gradient-overlay-dark" style="background-image:url('assets/img/2.jpg')">
-<img alt="" src="assets/img/2.jpg"/>
-</div>
-</li>
-<li>
-<div class="background-img gradient-overlay gradient-overlay-dark" style="background-image:url('assets/img/3.jpg')">
-<img alt="" src="assets/img/3.jpg"/>
-</div>
-</li>
-</ul>
+<!--Main slider - pure CSS cross-fade, no JS dependency-->
+<div class="css-slider">
+<div class="css-slide" style="background-image:url('assets/img/1.jpg')"></div>
+<div class="css-slide" style="background-image:url('assets/img/2.jpg')"></div>
+<div class="css-slide" style="background-image:url('assets/img/3.jpg')"></div>
+<div class="css-slider-overlay"></div>
 </div>
 <!--End main slider-->
 <div class="inner-hero">
