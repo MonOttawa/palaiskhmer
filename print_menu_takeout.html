@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<title>Menu — Palais Khmer</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+@page { margin: 0; size: A4; }
+* { box-sizing: border-box; }
+body {
+    font-family: 'Lustria', 'Georgia', serif;
+    color: #111111;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+.page {
+    width: 210mm;
+    height: 296mm;
+    padding: 9mm 13mm 24mm;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+}
+.page:last-child { page-break-after: auto; }
+
+/* ---------- header ---------- */
+.masthead { text-align: center; margin-bottom: 2mm; }
+.masthead img.logo {
+    width: 48mm; height: auto;
+    display: block; margin: 0 auto;
+}
+.masthead h1 {
+    font-size: 24pt; letter-spacing: .14em; margin: 2.5mm 0 1mm;
+    text-transform: uppercase; font-weight: 400;
+}
+.masthead .tagline {
+    font-size: 9.5pt; color: #717171; letter-spacing: .22em;
+    text-transform: uppercase; margin-top: 1.5mm;
+}
+.masthead .addr {
+    font-size: 8.5pt; color: #717171; margin-top: 1mm; letter-spacing: .04em;
+}
+.gold-divider {
+    width: 26mm; height: 1.4pt; background: #b5a46d;
+    margin: 2mm auto 2mm;
+}
+
+/* ---------- section headings ---------- */
+h2.section {
+    text-align: center; font-size: 14pt; font-weight: 400;
+    text-transform: uppercase; letter-spacing: .18em;
+    margin: 3mm 0 .8mm;
+}
+.section-sub {
+    text-align: center; font-size: 9pt; color: #717171;
+    letter-spacing: .06em; margin-bottom: 3.5mm;
+}
+.section-rule {
+    display: flex; align-items: center; gap: 3mm; margin: 0 auto 2.4mm; width: 70%;
+}
+.section-rule::before, .section-rule::after {
+    content: ""; flex: 1; height: .9pt; background: #b5a46d;
+}
+.section-rule span { color: #b5a46d; font-size: 10pt; }
+
+/* ---------- items ---------- */
+.item {
+    margin-bottom: 2mm;
+}
+.item img.thumb {
+    width: 10.5mm; height: 10.5mm; border-radius: 50%; object-fit: cover;
+    border: .8pt solid #d8c99a; flex: none; margin-top: .5mm;
+}
+.item { break-inside: avoid; }
+.item .body { flex: 1; }
+.item .line {
+    display: flex; align-items: baseline; gap: 2mm;
+}
+.item .name {
+    font-size: 10.8pt; letter-spacing: .02em;
+    background: #fff; padding-right: 2mm; z-index: 2; flex: none; max-width: 60%;
+}
+.item .dots {
+    flex: 1; border-bottom: .7pt dotted #d8cdad;
+    transform: translateY(-2pt);
+    opacity: .55;
+}
+.item .price {
+    font-size: 10.8pt; color: #111; flex: none;
+}
+.item .desc {
+    font-size: 8pt; color: #717171; line-height: 1.28; margin-top: .4mm;
+}
+.item .desc .variant { color: #9f8e59; }
+.chip {
+    display:inline-block; width: 3.2mm; height: 3.2mm; border-radius: 50%;
+    vertical-align: -0.3mm; margin-left: 1mm;
+}
+.chip.spicy { background: #c0392b; }
+.chip.peanut { background: #b5a46d; }
+
+/* ---------- extras strip ---------- */
+.extras {
+    border: .9pt solid #b5a46d; padding: 2.6mm 4mm; margin: 2mm 0 0;
+    font-size: 9pt; text-align: center; letter-spacing: .03em;
+}
+.extras b { letter-spacing: .08em; }
+
+/* ---------- footer ---------- */
+.page-foot {
+    position: absolute; bottom: 7mm; left: 13mm; right: 13mm;
+    text-align: center; font-size: 8.4pt; color: #717171;
+    border-top: .7pt solid #b5a46d; padding-top: 2.5mm;
+    letter-spacing: .05em;
+}
+.page-foot .hours { color: #111; letter-spacing: .08em; }
+
+/* two-column where useful */
+.cols2 { column-count: 2; column-gap: 9mm; }
+.masthead.compact img.logo { width: 26mm; }
+.masthead.compact h1 { font-size: 16pt; margin: 1.5mm 0 .5mm; }
+.masthead.compact .gold-divider { margin: 2mm auto 1mm; }
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+<div class="page">
+  <div class="masthead">
+    <img class="logo" src="assets/img/logo-palaiskhmer_transp-square.png" alt="Palais Khmer"/>
+    <div class="tagline">Cuisine cambodgienne &amp; thaïlandaise</div>
+    <div class="addr">293, chemin Larocque, Salaberry-de-Valleyfield (Québec) &nbsp;·&nbsp; Apportez votre vin &nbsp;·&nbsp; (450) 275-5633</div>
+    <div class="gold-divider"></div>
+  </div>
+
+  <h2 class="section">Entrées &amp; soupes</h2>
+  <div class="section-rule"><span>✦</span></div>
+
+  <div class="cols2">
+  <div class="item"><div class="body"><div class="line"><span class="name">Soupe Bangkok<span class="chip spicy"></span></span><span class="dots"></span><span class="price">8$</span></div>
+    <div class="desc">Au cari avec poulet, vermicelle, oignons et laitue.<br/><span class="variant">Format repas : 16$</span></div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Soupe Wonton</span><span class="dots"></span><span class="price">8$</span></div>
+    <div class="desc">Au porc avec oignons verts.<br/><span class="variant">Format repas : 16$</span></div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Salade de papaye<span class="chip spicy"></span><span class="chip peanut"></span></span><span class="dots"></span><span class="price">10$</span></div>
+    <div class="desc">Papaye cambodgienne acidulée, épicée et rafraîchissante. Feuilles de menthe, sauce thaï.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Rouleaux impériaux (2)</span><span class="dots"></span><span class="price">7$</span></div>
+    <div class="desc">Croustillants, remplis de porc et légumes. Servis avec sauce au poisson.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Rouleaux aux crevettes (6)</span><span class="dots"></span><span class="price">10$</span></div>
+    <div class="desc">Crevettes et coriandre enrobées dans une pâte croustillante.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Épinards frits</span><span class="dots"></span><span class="price">9$</span></div>
+    <div class="desc">Épinards croustillants avec trempette aux arachides.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Dumplings frits (6)</span><span class="dots"></span><span class="price">10$</span></div>
+    <div class="desc">Morceaux de porc, sauce aigre-douce thaï.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Dumplings bouillis (6)</span><span class="dots"></span><span class="price">10$</span></div>
+    <div class="desc">Morceaux de porc, sauce aux arachides.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Dumplings Khmer (6)</span><span class="dots"></span><span class="price">10$</span></div>
+    <div class="desc">Morceaux de porc, sauce au cari et lait de coco.</div></div>
+  </div>
+  </div>
+
+  <h2 class="section">Sautés thaïlandais et cambodgiens</h2>
+  <div class="section-rule"><span>✦</span></div>
+  <div class="section-sub">Votre choix de protéine<br/><b>végé 21$ · tofu 22$ · poulet 23$ · bœuf 25$ · crevettes 25$</b> — servis avec riz au jasmin</div>
+
+  <div class="item"><div class="body"><div class="line"><span class="name">Thaïlandais<span class="chip spicy"></span><span class="chip peanut"></span></span></div>
+    <div class="desc">Variétés de légumes dans une sauce au cari &amp; lait de coco.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Citronnelle</span></div>
+    <div class="desc">Légumes sautés, sauce citronnelle.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Arachides<span class="chip peanut"></span></span></div>
+    <div class="desc">Sauce aux arachides, épinards croustillants.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Poivre &amp; Ail</span></div>
+    <div class="desc">Ail, poivres et variété de légumes.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Basilic</span></div>
+    <div class="desc">Sauté variété de légumes, basilic frais.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Gingembre</span></div>
+    <div class="desc">Sauté au gingembre, mélange de légumes.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Khmera (cambodgien)</span></div>
+    <div class="desc">Plat typique cambodgien. Légumes, bambou, basilic, kaffir, citronnelle, bergamote.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Aigre-douce</span></div>
+    <div class="desc">Sauté aigre-doux, ananas, poivrons, oignons, courgettes.</div></div>
+  </div>
+
+  <div class="extras"><b>EXTRAS :</b> &nbsp;poulet 5$ &nbsp;·&nbsp; bœuf 6$ &nbsp;·&nbsp; crevettes (4x) 8$ &nbsp;·&nbsp; tofu 5$ &nbsp;·&nbsp; légumes 3$</div>
+
+</div>
+
+<!-- ================= PAGE 2 ================= -->
+<div class="page">
+  <div class="masthead compact">
+    <img class="logo" src="assets/img/logo-palaiskhmer_transp-square.png" alt="Palais Khmer"/>
+    <div class="gold-divider"></div>
+  </div>
+
+  <h2 class="section">Poulet</h2>
+  <div class="section-rule"><span>✦</span></div>
+  <div class="item">
+    <div class="body"><div class="line"><span class="name">Extra poulet</span><span class="dots"></span><span class="price">8$</span></div>
+    <div class="desc">Supplément de poulet pour le Général Tao.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Poulet Général Tao</span><span class="dots"></span><span class="price">25$</span></div>
+    <div class="desc">Croquant, sucré, épicé, légèrement acidulé. Ananas &amp; poivrons.</div></div>
+  </div>
+  
+  
+  
+
+<h2 class="section">Bœuf</h2>
+  <div class="section-rule"><span>✦</span></div>
+  <div class="cols2">
+
+  
+
+  <div class="item"><div class="body"><div class="line"><span class="name">Bœuf &amp; brocolis</span><span class="dots"></span><span class="price">25$</span></div>
+    <div class="desc">Bœuf tendre, brocolis, carottes, poivrons doux.</div></div>
+  </div>
+  
+  
+  <div class="item"><div class="body"><div class="line"><span class="name">Phuket</span><span class="dots"></span><span class="price">25$</span></div>
+    <div class="desc">Plat thaï citronné et parfumé. Kaffir, légumes &amp; épices thaï.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Bœuf Loc Lak</span><span class="dots"></span><span class="price">27$</span></div>
+    <div class="desc">Sauté de bœuf, oignons, laitue et tomates, sauce poivrée onctueuse.</div></div>
+  </div>
+  </div>
+  <h2 class="section">Fruits de mer</h2>
+  <div class="section-rule"><span>✦</span></div>
+  
+
+  <div class="item"><div class="body"><div class="line"><span class="name">Kampong Cham</span><span class="dots"></span><span class="price">28$</span></div>
+    <div class="desc">Juteux, aillé, pointe de poivre. Sauté aux crevettes et pétoncles.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Pétoncles et crevettes à la cambodgienne</span><span class="dots"></span><span class="price">28$</span></div>
+    <div class="desc">Sauce au cari et lait de coco, épices cambodgiennes.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Crevettes cambodgiennes</span><span class="dots"></span><span class="price">28$</span></div>
+    <div class="desc">Crevettes sautées façon cambodgienne, citronnelle, ail et légumes.</div></div>
+  </div>
+
+  <h2 class="section">Nouilles &amp; riz frits</h2>
+  <div class="section-rule"><span>✦</span></div>
+  <div class="section-sub">Pad Thaï &amp; Nid d'or : votre choix de protéine — <b>poulet 24$ · bœuf 25$ · crevettes 25$ · tofu 22$</b></div>
+  
+
+
+  
+  <div class="cols2">
+  <div class="item"><div class="body"><div class="line"><span class="name">Pad Thaï<span class="chip spicy"></span><span class="chip peanut"></span></span></div>
+    <div class="desc">Nouilles de riz sautées, fèves germées, œufs, cacahuètes.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Nid d'or</span></div>
+    <div class="desc">Sauté de protéine au choix &amp; légumes, sauce sésame, sur nid de nouilles frites.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Riz frit thaï</span><span class="dots"></span><span class="price">22$</span></div>
+    <div class="desc">Riz sauté au poulet, crevettes, oignons, poivrons, épices thaï.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Riz frit Khmer</span><span class="dots"></span><span class="price">21$</span></div>
+    <div class="desc">Riz frit au poulet, oignons, poivrons, sauce soja.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Riz jasmin à la vapeur</span><span class="dots"></span><span class="price">5$</span></div></div>
+  </div>
+  </div>
+
+  <h2 class="section">Desserts</h2>
+  <div class="section-rule"><span>✦</span></div>
+  <div class="cols2">
+  <div class="item"><div class="body"><div class="line"><span class="name">Beignet banane</span><span class="dots"></span><span class="price">6$</span></div>
+    <div class="desc">Beignet chaud, glace vanille.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Beignet ananas</span><span class="dots"></span><span class="price">6$</span></div>
+    <div class="desc">Beignet frais, glace vanille.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Beignet Khmer</span><span class="dots"></span><span class="price">6$</span></div>
+    <div class="desc">Sésame &amp; haricots mung.</div></div>
+  </div>
+  <div class="item"><div class="body"><div class="line"><span class="name">Crème glacée frite</span><span class="dots"></span><span class="price">8$</span></div>
+    <div class="desc">Les vrais le savent… !</div></div>
+  </div>
+  </div>
+  <div class="extras" style="margin-top:3mm"><b>BREUVAGES :</b> thé jasmin ou vert 3,75$ · café filtre 3,50$ · gazeuses 3,50$ · eau gazéifiée 4$ · eau en bouteille 3$</div>
+
+  <div class="page-foot">
+    <span class="hours">Ouvert jeudi &amp; vendredi 11h–14h / 17h–21h &nbsp;·&nbsp; samedi &amp; dimanche 17h–21h</span><br/>
+    Apportez votre vin &nbsp;·&nbsp; (450) 275-5633 &nbsp;·&nbsp; palaiskhmer.ca &nbsp;·&nbsp; Prix sujets à changement sans préavis
+  </div>
+</div>
+
+</body>
+</html>

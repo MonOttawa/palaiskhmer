@@ -1,0 +1,35 @@
+/* Mobile quality fixes — added after audit (Sep 2026) */
+
+/* Footer social icons: min 44x44px tap targets (WCAG 2.5.5 / iOS HIG) */
+footer .social-icon {
+    min-width: 44px;
+    min-height: 44px;
+    line-height: 44px;
+    font-size: 1.125rem;
+    margin-right: 4px;
+}
+
+/* Menu category tabs: comfortable touch height on small screens */
+@media (max-width: 991.98px) {
+    .nav-menu-tabs li a {
+        display: inline-block;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+    }
+}
+
+/* Hero logo: cap width so it never overflows narrow phones */
+.hero-content img.img-fluid {
+    max-width: min(100%, 600px);
+}
+
+/* Cookie banner buttons full-width stacked on phones */
+@media (max-width: 575.98px) {
+    .cookie-consent .cookie-btn,
+    #cookieConsent .cookie-btn,
+    .cookie-btn {
+        display: block;
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+}

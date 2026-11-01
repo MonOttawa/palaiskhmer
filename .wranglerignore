@@ -1,0 +1,6 @@
+_backup-old-site/
+_archive/
+.wrangler/
+menu_pdf_template.html
+print_menu_takeout.html
+print_menu_trifold.html

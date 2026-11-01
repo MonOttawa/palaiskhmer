@@ -9,6 +9,7 @@
   <link href="css/main.css" rel="stylesheet" type="text/css" media="all"/>
   <link href="https://fonts.googleapis.com/css?family=Lustria" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  <script defer src="https://umami.rosehilltech.com/script.js" data-website-id="afb43762-8b2e-489f-b4db-0743679571d3"></script>
 </head>
 <body class="bg-light">
   <div class="wrapper">
@@ -32,5 +33,18 @@
   <script src="js/bootstrap-dropdownhover.min.js"></script>
   <script src="js/smooth-scroll.js"></script>
   <script src="js/script.js"></script>
+<script>
+// Umami conversion tracking (mirrors gourmetdangkor): appel / courriel / pdf
+document.addEventListener('click', function(e){
+  var a = e.target.closest && e.target.closest('a');
+  if (!a || !window.umami) return;
+  var h = a.getAttribute('href') || '';
+  try {
+    if (h.indexOf('tel:') === 0) umami.track('appel', {cible: h});
+    else if (h.indexOf('mailto:') === 0) umami.track('courriel', {cible: h});
+    else if (/\.pdf($|\?)/i.test(h)) umami.track('pdf', {cible: h.slice(0,80)});
+  } catch (_) {}
+}, true);
+</script>
 </body>
 </html>
