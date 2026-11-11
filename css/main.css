@@ -19,6 +19,8 @@ Created by : mutationthemes
 9.Miscellaneous
 10.Mediaqueries
 
+-------------------------------------------------- */
+
 /* --------------------------------------------------
 	Consentement des cookies
 -------------------------------------------------- */
@@ -88,9 +90,18 @@ Created by : mutationthemes
     opacity: 0;
     animation: cssSlideFade 18s infinite;
 }
-.css-slide:nth-child(1) { animation-delay: 0s; }
-.css-slide:nth-child(2) { animation-delay: 6s; }
-.css-slide:nth-child(3) { animation-delay: 12s; }
+/* Stagger: derive the delay from the sibling index where supported (no per-child rules) */
+.css-slide { animation-delay: calc((sibling-index() - 1) * 6s); }
+@supports not (animation-delay: calc(sibling-index() * 0.1s)) {
+    .css-slide:nth-child(1) { animation-delay: 0s; }
+    .css-slide:nth-child(2) { animation-delay: 6s; }
+    .css-slide:nth-child(3) { animation-delay: 12s; }
+}
+/* Respect users who ask for reduced motion: stop the infinite crossfade */
+@media (prefers-reduced-motion: reduce) {
+    .css-slide { animation: none; opacity: 0; }
+    .css-slide:first-child { opacity: 1; }
+}
 .css-slider-overlay {
     position: absolute;
     top: 0;
